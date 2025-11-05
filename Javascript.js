@@ -1,3 +1,10 @@
 function showContact() {
-  document.getElementById("contact").style.display = "block";
+  const contactSection = document.getElementById("contact");
+
+  if (contactSection.style.display === "block") {
+    contactSection.style.display = "none";
+  } else {
+    contactSection.style.display = "block";
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
 }
